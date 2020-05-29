@@ -1,0 +1,110 @@
+---
+basics:
+  name: John Doe
+  label: Full Stack Developer / IT Strategist
+  image: ''
+  email: johnny@doe.com
+  phone: 888.888.8888
+  url: ''
+  summary: ''
+  location:
+    address: ''
+    postalCode: ''
+    city: New York
+    countryCode: USA
+    region: New York
+  profiles: []
+work:
+- name: Amazon.com
+  image: ''
+  description: IT Consulting
+  position: Contract Developer
+  url: http://amazon.com
+  startDate: '2018'
+  endDate: '2019'
+  summary: Headed software development.
+  highlights:
+  - Built own message broker
+  - Advised on API integration with downstream vendors
+- name: LG Electronics
+  image: ''
+  description: Global Electronics Concern
+  position: Contract Developer
+  url: http://lg.com
+  startDate: '2016'
+  endDate: '2017'
+  summary: Built custom data management tools for LG's Salesforce accounts.
+  highlights:
+  - Bypassed Salesforce API limitations with PhantomJS
+education:
+- institution: Harvard University
+  image: ''
+  area: ''
+  studyType: M.B.A.
+  startDate: '2008'
+  endDate: '2010'
+  gpa: ''
+  courses:
+  - Entrepreneurship
+  - Business Plan Competition
+- institution: University of Pennsylvania
+  image: ''
+  area: Finance
+  studyType: B.S.
+  startDate: '2001'
+  endDate: '2005'
+  gpa: ''
+  courses:
+  - President, Student Affairs Council
+awards: []
+publications:
+- name: tty-table
+  keywords:
+  - nodejs
+  - 20,000 weekly downloads
+  - Used by Atlassian
+  image: ''
+  publisher: github.com/tecfu/tty-table
+  releaseDate: ''
+  url: https://www.npmjs.com/package/tty-table
+  summary: ''
+skills:
+- name: Front-end Development
+  level: Master
+  keywords:
+  - VueJS
+  - ReactJS
+  - Xamarin
+  - Wordpress
+  - Cypress
+- name: Back-end Development
+  level: Master
+  keywords:
+  - Docker
+  - REST
+  - MSSQL
+  - Postgres
+  - Mongodb
+  - Postman
+- name: Business Development
+  level: Advanced
+  keywords:
+  - Agile Strategic Planning
+  - Business Plans
+  - Jira
+languages:
+- language: English
+  fluency: Native speaker
+- language: Node / Javascript
+  fluency: Master
+- language: Julia
+  fluency: Master
+- language: SQL
+  fluency: Advanced
+- language: Python
+  fluency: Intermediate
+- language: Russian
+  fluency: Intermediate Conversational
+interests: []
+references: []
+projects: []

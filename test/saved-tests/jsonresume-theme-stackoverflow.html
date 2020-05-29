@@ -1,0 +1,1228 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>John Doe</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+  <style>
+  /********************************************
+* 	reset from
+* 	http://meyerweb.com/eric/tools/css/reset/
+*******************************************/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/****************
+*	COMMONS
+****************/
+
+body,
+html {
+  margin: 1em .5em 0 .5em;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 11px;
+  color: #40484f;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.46153846;
+  text-align: left;
+  -webkit-text-size-adjust: 100%;
+}
+
+p {
+  display: block;
+}
+
+a {
+  color: #0095ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0c65a5;
+  text-decoration: underline;
+}
+
+li {
+  list-style-type: square;
+  list-style-position: outside;
+  margin-left: 1.3em;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.67rem;
+}
+
+h3 {
+  font-size: 1.27rem;
+}
+
+em {
+  color: #757575;
+}
+
+blockquote {
+  margin-bottom: 1em;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* main container */
+
+#resume {
+  padding: 1.5rem;
+}
+
+/* every section wrapper */
+
+.section {
+  margin-top: 1rem;
+}
+
+section .location {
+  margin-right: 0.5em;
+  color: #606d76;
+  font-weight: 700;
+}
+
+#contact {
+  margin-top: 0.5rem;
+}
+
+#contact > div {
+  display: inline;
+  padding-left: 10px;
+}
+
+#profiles .item {
+  padding: 0;
+}
+
+#header {
+  margin-bottom: 1em;
+}
+
+#header > #profiles,
+#header > #contact,
+#skills section,
+#languages section,
+#interests section {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+#header > div {
+  line-height: 1.5;
+}
+
+#header > div > div {
+  margin-right: 1.2em;
+}
+
+#header h1.name {
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-style: oblique;
+}
+
+#header h2.label {
+  color: #202931;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+#header .image {
+  width: 11em;
+  float: right;
+  border-radius: 4px;
+}
+
+.header-container {
+  display: table;
+  width: 100%;
+}
+
+.header-container > .header-left,
+.header-container > .header-right{
+  display: table-cell;
+  width: 50%;
+}
+
+.header-container > .header-right{
+  text-align: right;
+  vertical-align: top;
+}
+
+.main-summary {
+  background: #f1f8ff;
+  padding: 1.2em 1em;
+  margin-top: 1rem;
+}
+
+.main-summary p {
+  margin: 0;
+}
+
+.section-title {
+  display: inline-block;
+  background: #fff;
+  padding: 0 1em 0.3em 0;
+  color: #ff6d1f;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.section > header {
+  position: relative;
+}
+
+.fa {
+  margin-right: 0.25em;
+}
+
+.section > header::after {
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  height: 1px;
+  background: #ccc;
+  content: "";
+  width: 100%;
+  z-index: -100;
+  display: block;
+}
+
+.section.main-summary > section {
+  margin: 0;
+}
+
+.section > section > header {
+  font-size: 1.38rem;
+  position: relative;
+  margin-top: 0.7em;
+}
+
+.section > section > header:first-of-type {
+  margin: 0;
+}
+
+.section > section > header .space-left {
+  position: absolute;
+  left: -1.56rem;
+  top: 5px;
+  color: #aaa;
+  line-height: 1;
+  opacity: 0;
+}
+
+.info-container {
+  display: table;
+  width: 100%;
+}
+
+.info-right, .info-left {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.info-left {
+  width: 85%;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+.info-right {
+  width: 15%;
+  vertical-align: middle;
+}
+/* Logo */
+
+.info-right > img {
+  height: 70px;  
+  width: 70px;
+}
+
+
+.position,
+.company,
+.organization,
+.institution,
+.area,
+.studyType,
+.title,
+.awarder {
+  display: inline;
+}
+
+.position,
+.studyType,
+.area,
+.title,
+.language,
+.name {
+  font-weight: 600;
+}
+
+.company::before,
+.institution::before,
+.organization::before,
+.awarder::before {
+  content: "| ";
+}
+
+.company,
+.institution,
+.organization,
+.awarder {
+  color: #606d76;
+  font-weight: 400;
+}
+
+.section header .date {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+section#work .summary > p {
+  color: #333;
+}
+
+.keywords,
+.courses {
+  margin: 0.5em 0;
+}
+
+.keywords li,
+.courses li {
+  display: inline-block;
+  margin: 2px 2px 2px 0;
+  padding: 4px 5px 5px;
+  font-size: 0.9rem;
+  line-height: 1;
+  color: #3e6d8e;
+  background-color: #dfeaf1;
+  border: 0 solid #dfeaf1;
+  border-radius: 4px; 
+  white-space: nowrap;
+}
+
+.keywords li:hover,
+.courses li:hover {
+  background: #dfeaf0;
+}
+
+.highlights {
+  margin: 1em 0 0 0;
+}
+
+.highlights > li > p {
+  /* margin-bottom: 0.5em; */
+}
+
+.item {
+  overflow: hidden;
+}
+
+.gpa {
+  clear: both;
+  padding-bottom: 0.5em;
+}
+
+.fa.social {
+  font-size: 1.1em;
+}
+
+
+/****************
+*		CALLOUTS
+****************/
+
+.bs-callout {
+  padding: 10px;
+  border: 0px solid #eee;
+  border-left-width: 5px;
+  border-radius: 0px;
+}
+.bs-callout-xl {
+  margin-left: 0px;
+}
+.bs-callout-xs { 
+  padding: 4px;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+}
+.bs-callout h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.bs-callout p:last-child {
+  margin-bottom: 0;
+}
+.bs-callout code {
+  border-radius: 4px;
+}
+.bs-callout+.bs-callout {
+  margin-top: -5px;
+}
+.bs-callout-default {
+  border-left-color: #777;
+  background-color: #f7f7f9;
+}
+.bs-callout-default h4 {
+  color: #777;
+}
+.bs-callout-primary {
+  border-left-color: #428bca;
+}
+.bs-callout-primary h4 {
+  color: #428bca;
+}
+.bs-callout-success {
+  border-left-color: #5cb85c;
+  background-color: #efffe8;
+}
+.bs-callout-success h4 {
+  color: #5cb85c;
+}
+.bs-callout-danger {
+  font-weight: bold;
+  text-transform: uppercase;
+  border-color: red;
+  border-left-color: #333;
+  background-color: red;
+  color: white;
+}
+.bs-callout-danger h4 {
+  color: #d9534f;
+}
+.bs-callout-warning {
+  border-left-color: #ff6d1f;
+  background-color: #fefbed;
+}
+.bs-callout-warning h4 {
+  color: #f0ad4e;
+}
+.bs-callout-info {
+  border-left-color: #5bc0de;
+  background-color: #f0f7fd;
+}
+.bs-callout-info h4 {
+  color: #5bc0de;
+}
+
+/* bg transparency and disabled effects for Bootstrap callout */ 
+.bs-callout-default.transparent {
+  background-color: rgb(247, 247, 249, 0.7); /*#f7f7f9*/
+}
+.bs-callout-success.transparent {
+  background-color: rgb(239, 255, 232, 0.7); /*#efffe8*/
+}
+.bs-callout-warning.transparent {
+  background-color: rgb(254, 251, 237, 0.7); /*#fefbed*/
+}
+.bs-callout-danger.transparent {
+  background-color: rgb(252, 242, 242, 0.7); /*#fcf2f2*/
+}
+.bs-callout-info.transparent {
+  background-color: rgb(240, 247, 253, 0.7); /*#f0f7fd*/
+}
+.bs-callout.disabled {
+  opacity: 0.4;
+}
+
+
+/* Social Media Brand Colors */
+
+.google-plus {
+  color: #dd4b39;
+}
+
+.tumblr {
+  color: #32506d;
+}
+
+.foursquare {
+  color: #0072b1;
+}
+
+.facebook {
+  color: #3b5998;
+}
+
+.linkedin {
+  color: #007bb6;
+}
+
+.pinterest {
+  color: #cb2027;
+}
+
+.dribbble {
+  color: #ea4c89;
+}
+
+.instagram {
+  color: #517fa4;
+}
+
+.twitter {
+  color: #00aced;
+}
+
+.soundcloud {
+  color: #ff3a00;
+}
+
+.wordpress {
+  color: #21759b;
+}
+
+.youtube {
+  color: #bb0000;
+}
+
+.github {
+  color: #171515;
+}
+
+.stack-overflow {
+  color: #828386;
+  position: relative;
+}
+
+.flickr {
+  color: #ff0084;
+}
+
+.reddit {
+  color: #ff4500;
+}
+
+.hacker-news {
+  color: #ff6600;
+}
+
+.stack-overflow::after {
+  position: absolute;
+  left: 0;
+  content: "\f16c";
+  color: #f68a1f;
+  overflow: hidden;
+  height: 100%;
+}
+
+.telegram {
+  color: #2291c3;
+}
+
+#languages .item,
+#skills .item,
+#interests .item {
+  width: 15em;
+  /*padding: 0 0.5em 0.5em 0;*/
+  padding: 0;
+  border-bottom: none;
+}
+
+#skills .item {
+  width: 16em;
+}
+
+#skills .item .keywords {
+  width: 15em;
+}
+
+/* Skill chart */
+
+.level {
+  margin-bottom: 0.5em;
+}
+
+.level em {
+  padding-left: 0.2em;
+}
+
+.level .bar {
+  border: 1px solid #ddd;
+  display: block;
+  width: 10em;
+  height: 5px;
+  position: relative;
+}
+
+.level .bar::after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  background: black;
+  height: 5px;
+}
+
+.level.beginner .bar::after {
+  background: #5cb85c;
+  width: 2.5em;
+}
+
+.level.intermediate .bar::after {
+  background: #5cb85c;
+  width: 6.5em;
+}
+
+.level.advanced .bar::after,
+.level.fluent .bar::after {
+  background: #5cb85c;
+  width: 7.5em;
+}
+
+.level.master .bar::after,
+.level.native.speaker .bar::after {
+  background: #5cb85c;
+  width: 10em;
+}
+
+#references .item {
+  padding-left: 0.5em;
+  border-left: 5px solid #ff6d1f;
+}
+
+.toggle-item {
+  display: none;
+}
+
+.section > section > section {
+  /* margin-bottom: 0.5rem; /*
+}
+
+/******************
+*	HELPER CLASSES
+******************/
+
+.clear::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.display {
+  display: block;
+  opacity: 1 !important;
+}
+
+@media print {
+  #resume {
+    margin: 1em;
+    padding: 0.1em;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    line-height: 1.25;
+  }
+  @page {
+    margin: 1cm 1.4cm;
+  }
+
+  .company::before,
+  .institution::before,
+  .organization::before,
+  .awarder::before {
+    content: "| ";
+  }
+  
+  .section {
+    margin: 0.8rem 0;
+    padding: 0;
+  }
+  .section header {
+    padding-bottom: 0.15rem;
+  }
+  .section .location {
+    padding-bottom: 0.15rem;
+  }
+  .section > section > section {
+    margin: 0 0 0 0;
+  }
+  .section > section > section:last-of-type {
+    margin: 0;
+  }
+  .item-count {
+    display: none;
+  }
+  .fa.social {
+    color: #828386;
+  }
+  ul {
+    margin-top: 0.4em;
+  }
+  ul,
+  li {
+    padding: 0;
+  }
+  .section p {
+    margin: 0;
+    padding: 0;
+  }
+  ul.courses::before {
+    content: "Major courses: ";
+  }
+  ul.keywords li:last-of-type::after,
+  ul.courses li:last-of-type::after {
+    content: "";
+  }
+  .level em {
+    font-style: normal;
+    padding: 0.1em 0;
+  }
+  #profiles .item {
+    padding: 0;
+  }
+  .item.display {
+    display: block;
+    opacity: 1 !important;
+  }
+  .fa-map-marker-alt:before {
+    padding-left: 0.1em;
+  }
+}
+
+  </style>
+  
+  </head>
+  <body>
+  
+  <div id="resume">
+      <header id="header" class="clear">
+        <div class="header-container">
+        <div class="header-left">
+          <h1 class="name">John Doe</h1>
+    
+          <span class="location">
+            <span class="city">New York,</span>
+            <span class="region">New York</span>
+            <span class="countryCode">USA</span>
+          </span>
+    
+    
+    
+        </div>
+    
+        <div class="header-right"> 
+          <h2 class="label">Full Stack Developer / IT Strategist</h2>
+    
+          <div id="contact">
+           <div class="email">
+             <span class="far fa-envelope"></span>
+             <a href="mailto:johnny@doe.com">johnny@doe.com</a>
+           </div>
+           <div class="phone">
+             <span class="fas fa-mobile-alt"></span>
+             <a href="tel:888.888.8888">888.888.8888</a>
+           </div>
+          </div>
+      
+        </div>
+        </div>
+      </header>
+    
+    
+    <section id="skills" class="section">
+      <header>
+        <h2 class='section-title'>Skill Sets</h2>
+      </header>
+      <section>
+        <div class="item">
+          <h3 class="name">
+            Front-end Development
+          </h3>
+           
+          <div class="level master">
+            <em>Master</em>
+            <div class="bar"></div>
+          </div>
+          <ul class="keywords">
+            <li>VueJS</li>
+            <li>ReactJS</li>
+            <li>Xamarin</li>
+            <li>Wordpress</li>
+            <li>Cypress</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Back-end Development
+          </h3>
+           
+          <div class="level master">
+            <em>Master</em>
+            <div class="bar"></div>
+          </div>
+          <ul class="keywords">
+            <li>Docker</li>
+            <li>REST</li>
+            <li>MSSQL</li>
+            <li>Postgres</li>
+            <li>Mongodb</li>
+            <li>Postman</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Business Development
+          </h3>
+           
+          <div class="level advanced">
+            <em>Advanced</em>
+            <div class="bar"></div>
+          </div>
+          <ul class="keywords">
+            <li>Agile Strategic Planning</li>
+            <li>Business Plans</li>
+            <li>Jira</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+    <section id="work" class="section">
+      <header>
+        <h2 class='section-title'>Work Experience</h2>
+      </header>
+    
+      <section>
+        <section class="work-item">
+          <div class="info-container">
+          <div class="info-left">
+    
+            <!--
+              <input id="work-item-0" type="checkbox" class="toggle-item" checked="checked" />
+            -->
+              <input id="work-item-0" type="checkbox" class="toggle-item" checked="checked" />
+    
+              <label for="work-item-0"></label>
+    
+            <header class="info-container">
+              <div class="info-left">
+                <div class="position">Contract Developer</div>
+                <div class="company">Amazon.com</div>
+    
+                <div class="summary"><p>Headed software development.</p></div>
+    
+     
+                <div class="item" id="work-item">
+                <ul class="highlights">
+                    <li><p>Built own message broker</p></li>
+                    <li><p>Advised on API integration with downstream vendors</p></li>
+                </ul>
+                </div>
+              </div>
+              <div class="date info-right">
+                <span class="startDate">2018</span>
+                <span class="endDate">- 2019</span>
+              </div>
+            </header>
+          </div>
+    
+          <div class="info-right">
+          </div>
+          </div>
+              
+    
+        </section>
+        <section class="work-item">
+          <div class="info-container">
+          <div class="info-left">
+    
+            <!--
+              <input id="work-item-1" type="checkbox" class="toggle-item" />
+            -->
+              <input id="work-item-1" type="checkbox" class="toggle-item" checked="checked" />
+    
+              <label for="work-item-1"></label>
+    
+            <header class="info-container">
+              <div class="info-left">
+                <div class="position">Contract Developer</div>
+                <div class="company">LG Electronics</div>
+    
+                <div class="summary"><p>Built custom data management tools for LG's Salesforce accounts.</p></div>
+    
+     
+                <div class="item" id="work-item">
+                <ul class="highlights">
+                    <li><p>Bypassed Salesforce API limitations with PhantomJS</p></li>
+                </ul>
+                </div>
+              </div>
+              <div class="date info-right">
+                <span class="startDate">2016</span>
+                <span class="endDate">- 2017</span>
+              </div>
+            </header>
+          </div>
+    
+          <div class="info-right">
+          </div>
+          </div>
+              
+    
+        </section>
+      </section>
+    </section>
+    <section id="education" class="section">
+      <header>
+        <h2 class='section-title'>Education</h2>
+      </header>
+    
+      <section>
+        <section class="education-item">
+          <header class="info-container clear">
+            <div class="info-left">
+              <div class="info-container">
+                <div class="info-left">
+                  <div class="studyType">
+                    M.B.A.
+                  </div>
+                  <div class="institution">
+                    Harvard University
+                  </div>
+    
+    
+                  <ul class="courses">
+                    <li>Entrepreneurship</li>
+                    <li>Business Plan Competition</li>
+                  </ul>
+    
+                  <div class="item">
+                  </div>
+    
+                </div>
+    
+                <div class="date info-right">
+                  <span class="startDate">
+                  2008
+                  </span>
+                  <span class="endDate">
+                  - 2010
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="info-right">
+            </div>
+          </header>
+    
+        </section>
+        <section class="education-item">
+          <header class="info-container clear">
+            <div class="info-left">
+              <div class="info-container">
+                <div class="info-left">
+                  <div class="studyType">
+                    B.S.
+                  </div>
+                  <div class="area">
+                    Finance
+                  </div>
+                  <div class="institution">
+                    University of Pennsylvania
+                  </div>
+    
+    
+                  <ul class="courses">
+                    <li>President, Student Affairs Council</li>
+                  </ul>
+    
+                  <div class="item">
+                  </div>
+    
+                </div>
+    
+                <div class="date info-right">
+                  <span class="startDate">
+                  2001
+                  </span>
+                  <span class="endDate">
+                  - 2005
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="info-right">
+            </div>
+          </header>
+    
+        </section>
+      </section>
+    </section>
+    <section id="publications" class="section">
+      <header>
+        <h2 class='section-title'>Publications</h2>
+      </header>
+    
+      <section>
+    
+    
+        <section class="publication-item">
+        <div class="info-container">
+    
+          <div class="info-left">
+    
+            <header class="clear">
+              <div class="header-left">
+                <span class="name">
+                tty-table
+                </span>
+                <span class="publisher">
+                | github.com/tecfu/tty-table
+                </span>
+              </div>
+            </header>
+            <ul class="keywords">
+              <li>nodejs</li>
+              <li>20,000 weekly downloads</li>
+              <li>Used by Atlassian</li>
+            </ul>
+    
+            <div class="item">  
+            </div>
+          </div>
+    
+          <div class="info-right">
+          </div>
+    
+        </div>
+        </section>
+    
+      </section>
+    </section>
+    <section id="languages" class="section">
+      <header>
+        <h2 class='section-title'>Languages</h2>
+      </header>
+      <section>
+        <div class="display">
+          <h3 class="language">
+            English
+          </h3>
+          <div class="item">
+            <div class="level fluency native speaker">
+              <em>Native speaker</em>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <h3 class="language">
+            Node / Javascript
+          </h3>
+          <div class="item">
+            <div class="level fluency master">
+              <em>Master</em>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <h3 class="language">
+            Julia
+          </h3>
+          <div class="item">
+            <div class="level fluency master">
+              <em>Master</em>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <h3 class="language">
+            SQL
+          </h3>
+          <div class="item">
+            <div class="level fluency advanced">
+              <em>Advanced</em>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <h3 class="language">
+            Python
+          </h3>
+          <div class="item">
+            <div class="level fluency intermediate">
+              <em>Intermediate</em>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <h3 class="language">
+            Russian
+          </h3>
+          <div class="item">
+            <div class="level fluency intermediate conversational">
+              <em>Intermediate Conversational</em>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+  </body>
+</html>
+ 
+<style>
+  #publications .info-left {
+  color: red;
+  width: 85%;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+</style>
